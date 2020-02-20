@@ -1,9 +1,9 @@
 pipeline {
-    agent {label 'swarm'}
+    agent none
     stages {
         stage('Build') {
             steps {
-                sh './gradlew build --no-daemon'
+                sh './gradlew build'
             }
         }
         stage('Test') {
